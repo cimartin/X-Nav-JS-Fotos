@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+     <title>Ejercicio 5.5.7</title>
+     <script type="text/javascript" charset="utf-8">
+       function foto() {
+          var fotos = [
+            'http://files.nolocreocdn.com/wp-content/uploads/2015/01/cd74c6ef2247351c34703d55318e7bbe.jpg',
+            'http://a2.assets.nationalgeographic.es/soc_photo/2354.600x450.jpg',
+            'http://www.bioparcvalencia.es/wp-content/uploads/2016/08/Cachorro-de-leopardo-BIOPARC-Valencia-agosto-2016-1024x821.jpg',
+            'http://cdn.20m.es/img2/recortes/2016/08/26/332940-680-363.jpg?v=20160826110325'
+          ]
+          element = document.getElementById('imagen');
+          photoURL = fotos[Math.floor(Math.random()*fotos.length)]
+          element.innerHTML = '<img src="' + photoURL + '">';
+       }
+     </script>
+   </head>
+   <body>
+     <p>Quieres ver fotos <a href="javascript:foto()">Miralas!</a></p>
+     <span id="imagen"> </span>
+     <script type="text/javascript" charset="utf-8"> //esto lo pones para que el dom cargue primero y asi te sale la imagen al cargar la pagina
+     foto(); //
+     </script>
+   </body>
+</html>
